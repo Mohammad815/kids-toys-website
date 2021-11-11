@@ -39,10 +39,7 @@ const Login = () => {
 
 
     const handleGoogleLogin = () => {
-        signInWithGoogle()
-      .then((result) => {
-          history.push(redirect_uri)
-        })
+        signInWithGoogle(location, history)
     }
     return (
         <div>

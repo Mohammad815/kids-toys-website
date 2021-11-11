@@ -1,10 +1,21 @@
-import React from 'react';
+import React from "react";
+import { Button, Col, Container, Row } from "react-bootstrap";
+import {
+  Switch,
+  Route,
+  Link,
+  useRouteMatch
+} from "react-router-dom";
+
+
 
 const Dashboard = () => {
+
     return (
         <div>
-            <h2>this is dashboard</h2>
+            this dashbord
         </div>
+      
     );
 };
 

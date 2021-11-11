@@ -10,12 +10,19 @@ const Register = () => {
   const { register, handleSubmit, watch, errors } = useForm();
 
   const onSubmit = (data) => {
-    handleUserRegister(data.email, data.password,history);
+    handleUserRegister(data.email, data.password,data.name,history);
     console.log(data);
   };
     return (
         <div>
       <form onSubmit={handleSubmit(onSubmit)}>
+        <input
+          className="input-field"
+          name="name"
+          placeholder="Your Name"
+          {...register("name", { required: true })}
+        />
+        <br />
         <input
           className="input-field"
           name="email"
