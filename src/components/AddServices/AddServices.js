@@ -1,9 +1,10 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 import useFirebase from "../Hooks/useFirebase";
-import '../AddProduct/AddProduct.css'
+import '../AddServices/AddServices.css'
 
-const AddProduct = () => {
+
+const AddServices = () => {
   const { user } = useFirebase();
   const {
     register,
@@ -13,13 +14,13 @@ const AddProduct = () => {
   } = useForm();
 
   const onSubmit = (data) => {
-    fetch("http://localhost:5000/AddProduct", {
-      method: "POST",
-      headers: { "content-type": "application/json" },
-      body: JSON.stringify(data),
-    })
-      .then((res) => res.json())
-      .then((result) => console.log(result));
+    // fetch("http://localhost:5000/addServices", {
+    //   method: "POST",
+    //   headers: { "content-type": "application/json" },
+    //   body: JSON.stringify(data),
+    // })
+    //   .then((res) => res.json())
+    //   .then((result) => console.log(result));
     console.log(data);
   };
   return (
@@ -50,8 +51,8 @@ const AddProduct = () => {
 
                 <input
                   {...register("price", { required: true })}
-                  placeholder= "Price"
-                  type="text"
+                  placeholder="Price"
+                  type="number"
                   className="p-2 m-2 w-100 input-field"
                 />
 
@@ -78,4 +79,4 @@ const AddProduct = () => {
   );
 };
 
-export default AddProduct;
+export default AddServices;

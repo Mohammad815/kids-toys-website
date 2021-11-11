@@ -39,5 +39,19 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
+  "main": "index.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/programming-hero-web-course-4/niche-website-client-side-Mohammad815.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/programming-hero-web-course-4/niche-website-client-side-Mohammad815/issues"
+  },
+  "homepage": "https://github.com/programming-hero-web-course-4/niche-website-client-side-Mohammad815#readme"
 }
