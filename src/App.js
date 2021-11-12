@@ -13,9 +13,10 @@ import Login from './components/Login/Login';
 import AddProduct from './components/AddProduct/AddProduct';
 import AuthProvider from './components/Context/AuthProvider/AuthProvider';
 import PrivateRoute from './components/PirvateRoute/PrivateRoute';
-import Dashboard from './components/Dashboard/Dashboard';
+
 import Navigation from './components/Shared/Navigation/Navigation';
 import Details from './components/Home/Details/Details';
+import Dashboard from './components/Dashboard/Dashboard/Dashboard';
 
 
 
@@ -42,7 +43,7 @@ function App() {
                   <Details></Details>
                 </Route>
               
-                <PrivateRoute exact path="/dashboard">
+                <PrivateRoute  path="/dashboard">
                   <Dashboard></Dashboard>
                 </PrivateRoute>
                 <Route exact path="/addproduct">
