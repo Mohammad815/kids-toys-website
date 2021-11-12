@@ -13,6 +13,9 @@ import {
 import Home from "../../Home/Home";
 import Review from "../../Review/Review";
 import MakeAdmin from "../../Dashboard/MakeAdmin/MakeAdmin"
+import Pay from "../Pay/Pay";
+import AddProduct from "../../AddProduct/AddProduct";
+import ManagAllProduct from "../ManageAllProducts/ManagAllProduct";
 
 const Dashboard = () => {
   const {admin}= useAuth()
@@ -32,7 +35,16 @@ const Dashboard = () => {
           {admin && <Link to={`${url}/makeAdmin`}>Make Admin</Link>}
         </li>
         <li>
-          <Link to={`${url}/props-v-state`}>Props v. State</Link>
+          <Link to={`${url}/pay`}>Payment</Link>
+          
+        </li>
+        <li>
+          <Link to={`${url}/addProduct`}>Add Product</Link>
+
+        </li>
+        <li>
+          <Link to={`${url}/manageProduct`}>Manage All Product</Link>
+
         </li>
       </ul>
     </Col>
@@ -46,6 +58,15 @@ const Dashboard = () => {
         </Route>
         <Route path={`${path}/makeAdmin`}>
             <MakeAdmin></MakeAdmin>
+        </Route>
+        <Route path={`${path}/pay`}>
+            <Pay></Pay>
+        </Route>
+        <Route path={`${path}/addProduct`}>
+            <AddProduct></AddProduct>
+        </Route>
+        <Route path={`${path}/manageProduct`}>
+            <ManagAllProduct></ManagAllProduct>
         </Route>
       </Switch>
     </Col>

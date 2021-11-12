@@ -9,7 +9,7 @@ const Navigation = () => {
     return (
         <Navbar className="navbar" collapseOnSelect expand="lg"   variant="dark">
             <Container>
-            <Link className="navLink " to="/home">Global Travel Agency</Link>
+            <Link className="navLink " to="/home">Kid Toys</Link>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse className="text-black" id="responsive-navbar-nav">
                 <Nav className="ms-auto navbar">
@@ -17,6 +17,7 @@ const Navigation = () => {
                     <Link className="navLink" to="/addproduct">Add Product</Link>
                   
                     <Link className="navLink" to="/dashboard">Dashboard</Link>
+                    {/* <Link className="navLink" to="/addreview">Add Review</Link> */}
                     
                    
                     

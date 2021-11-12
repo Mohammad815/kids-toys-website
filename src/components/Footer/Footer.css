@@ -1,0 +1,28 @@
+body {
+    margin: 0;
+    padding: 0;
+    height:1000px;
+    }
+    .App{
+    text-align: center;
+   
+    }
+    .footer {
+        margin-top: 2rem;
+        padding: 1rem;
+        background-color: #040E27;
+        position: relative;
+        bottom: 0;
+        left: 0;
+        width: 100%;     
+    }
+    .blog{
+        display: flex;
+        justify-content:space-evenly;
+        color: rgb(214, 213, 211);
+    }
+    .blog ul li{
+        list-style: none;
+    }
+  
+    

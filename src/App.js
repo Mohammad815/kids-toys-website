@@ -17,6 +17,8 @@ import PrivateRoute from './components/PirvateRoute/PrivateRoute';
 import Navigation from './components/Shared/Navigation/Navigation';
 import Details from './components/Home/Details/Details';
 import Dashboard from './components/Dashboard/Dashboard/Dashboard';
+import Explore from './components/Home/Explore/Explore';
+import Review from './components/Review/Review';
 
 
 
@@ -36,8 +38,14 @@ function App() {
                 <Route exact path="/register">
                   <Register></Register>
                 </Route>
+                <Route exact path="/explore">
+                  <Explore></Explore>
+                </Route>
                 <Route exact path="/login">
                   <Login></Login>
+                </Route>
+                <Route exact path="/addreview">
+                 <Review></Review>
                 </Route>
                 <Route exact path="/products/:productId">
                   <Details></Details>

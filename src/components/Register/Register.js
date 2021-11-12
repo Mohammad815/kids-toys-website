@@ -14,7 +14,7 @@ const Register = () => {
     console.log(data);
   };
     return (
-        <div>
+        <div className="m-5">
       <form onSubmit={handleSubmit(onSubmit)}>
         <input
           className="input-field"
@@ -41,12 +41,12 @@ const Register = () => {
         <br />
 
         <input
-          className="submit-btn btn btn-danger mt-3"
+          className="submit-btn btn btn-primary fs-3 m-3"
           type="submit"
           value="Register"
         />
       </form>
-      <Link className="navLink" to="/login"> <button>Already Registered please go to Login</button></Link>
+      <Link  style={{ textDecoration: 'none' }} className="navLink" to="/login"> <h3>Already Registered? please go to Login</h3></Link>
     </div>
     );
 };

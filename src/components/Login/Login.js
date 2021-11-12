@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Container, Form, Button } from 'react-bootstrap';
 import { useHistory, useLocation } from 'react-router';
-import { Link } from 'react-router-dom';
+import {  NavLink } from 'react-router-dom';
 import useAuth from '../Context/useAuth';
 import './Login.css'
 
@@ -34,7 +34,7 @@ const Login = () => {
             })
      }
 
-    const redirect_uri = location.state?.from || '/home'
+    // const redirect_uri = location.state?.from || '/home'
 
 
 
@@ -43,6 +43,7 @@ const Login = () => {
     }
     return (
         <div>
+          <h3 className="m-4">Welcome back! Please enter your Email and password to login.</h3>
           <Container className="form">
           <Form onSubmit={handleLoginWithEmailAndPassword} className="w-50">
               <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -56,13 +57,19 @@ const Login = () => {
                 <Form.Control onBlur={handleGetPassword} type="password" placeholder="Password" />
               </Form.Group>
             
-              <Button variant="primary" type="submit">
+              <Button className="w-25 fs-4  mb-3" variant="primary" type="submit">
                 Login
-              </Button>
+              </Button> <br />
+              <NavLink
+                            style={{ textDecoration: 'none' }}
+                            to="/register">
+                            <h4 variant="primary">New User? Please Register</h4>
+                        </NavLink>
            </Form>
           </Container>
-          <button onClick={handleGoogleLogin}>Google Sign In</button>
-          <Link className="navLink" to="/register"> <button>If you New user Please go to Register</button></Link>
+         <h2>OR</h2>
+          <button className="btn btn-primary  fs-4" onClick={handleGoogleLogin}>Google Sign In</button>
+         
         </div>
 
     );
