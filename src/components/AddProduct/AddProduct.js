@@ -13,7 +13,7 @@ const AddProduct = () => {
   } = useForm();
 
   const onSubmit = (data) => {
-    fetch("http://localhost:5000/AddProduct", {
+    fetch("https://sheltered-lake-09229.herokuapp.com/AddProduct", {
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify(data),

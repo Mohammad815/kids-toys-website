@@ -1,5 +1,6 @@
 import React from "react";
 import { Col, Row } from "react-bootstrap";
+import useAuth from '../../Context/useAuth';
 
 import {
     BrowserRouter as Router,
@@ -14,6 +15,8 @@ import Review from "../../Review/Review";
 import MakeAdmin from "../../Dashboard/MakeAdmin/MakeAdmin"
 
 const Dashboard = () => {
+  const {admin}= useAuth()
+  console.log(admin)
     let { path, url } = useRouteMatch();
     return (
         <Row>
@@ -26,7 +29,7 @@ const Dashboard = () => {
           <Link to={`${url}/review`}>Review</Link>
         </li>
         <li>
-          <Link to={`${url}/makeAdmin`}>Make Admin</Link>
+          {admin && <Link to={`${url}/makeAdmin`}>Make Admin</Link>}
         </li>
         <li>
           <Link to={`${url}/props-v-state`}>Props v. State</Link>

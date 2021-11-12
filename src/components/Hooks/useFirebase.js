@@ -7,6 +7,7 @@ initializeAuthentication();
 const useFirebase = () => {
     const [user, setUser] = useState({});
     const [error, setError] = useState("");
+    const [admin, setAdmin] = useState(false);
     const auth = getAuth();
     const googleProvider = new GoogleAuthProvider();
 
@@ -75,7 +76,7 @@ const useFirebase = () => {
     }
     const saveUser = (email, displayName, method) => {
       const user = { email, displayName };
-      fetch('http://localhost:5000/users', {
+      fetch('https://sheltered-lake-09229.herokuapp.com/users', {
           method: method,
           headers: {
               'content-type': 'application/json'
@@ -84,9 +85,16 @@ const useFirebase = () => {
       })
           .then()
   }
+
+  useEffect(() => {
+    fetch(`https://sheltered-lake-09229.herokuapp.com/users/${user.email}`)
+        .then(res => res.json())
+        .then(data => setAdmin(data.admin))
+}, [user.email])
     return {
         signInWithGoogle,
         user,
+        admin,
         logout,
         handleUserRegister,
         loginUser

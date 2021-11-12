@@ -14,7 +14,7 @@ const Details = () => {
         const onSubmit = (data) => {
             data.email = user?.email;
             data.status = "pending";
-            fetch("http://localhost:5000/addOrders", {
+            fetch("https://sheltered-lake-09229.herokuapp.com/addOrders", {
               method: "POST",
               headers: { "content-type": "application/json"},
               body: JSON.stringify(data),
@@ -25,7 +25,7 @@ const Details = () => {
           };
 
     useEffect(() => {
-        fetch(`http://localhost:5000/singleProduct/${productId}`)
+        fetch(`https://sheltered-lake-09229.herokuapp.com/singleProduct/${productId}`)
           .then((res) => res.json())
           .then((data) => setProdcut(data));
       }, []);
