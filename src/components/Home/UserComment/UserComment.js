@@ -4,7 +4,7 @@ import { Container } from 'react-bootstrap';
 const UserComment = () => {
     const [review, setreview] = useState([]);
     useEffect(() => {
-      fetch("http://localhost:5000/allReview")
+      fetch("https://sheltered-lake-09229.herokuapp.com/allReview")
         .then((res) => res.json())
         .then((data) => setreview(data));
     }, []);

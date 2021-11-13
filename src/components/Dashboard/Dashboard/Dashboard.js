@@ -20,7 +20,7 @@ import MyOrder from "../MyOrder/MyOrder";
 
 const Dashboard = () => {
   const {admin}= useAuth()
-  console.log(admin)
+ 
     let { path, url } = useRouteMatch();
     return (
   <Row>
@@ -60,9 +60,6 @@ const Dashboard = () => {
     </Col>
     <Col xs={12} md={9}>
     <Switch>
-        <Route exact path={path}>
-            <Dashboard></Dashboard>
-        </Route>
         <Route path={`${path}/review`}>
             <Review></Review>
         </Route>

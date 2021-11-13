@@ -5,14 +5,14 @@ const ManagAllProduct = () => {
     const [allProduct, setAllProduct] = useState([]);
     const [isDeleted, setDeleted] = useState(null)
     useEffect(() => {
-      fetch("http://localhost:5000/allProducts")
+      fetch("https://sheltered-lake-09229.herokuapp.com/allProducts")
         .then((res) => res.json())
         .then((data) => setAllProduct(data));
-    }, [[isDeleted]]);
+    }, [isDeleted]);
 
     console.log(allProduct)
     const handleDelete = id => {
-        const url = `http://localhost:5000/deleteProduct/${id}`
+        const url = `https://sheltered-lake-09229.herokuapp.com/deleteProduct/${id}`
         console.log(url)
         fetch(url,{
             method:"DELETE",

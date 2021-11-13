@@ -18,12 +18,12 @@ const Products = () => {
         <div>
       <h1>Products</h1>
       <Container>
-      <div className="services">
-        <div className="row container">
+      <div className="services ">
+        <div className="row container ">
           {products?.map((pd, index) => (
-            <div className="col-md-6 col-lg-4">
+            <div className="col-md-6 col-lg-4 toy-img mb-3">
               <div className="service p-3 border border m-2">
-                <div className="service-img">
+                <div >
                   <img className="w-50" src={pd?.image} alt="" />
                 </div>
                 <h1>{pd.name}</h1>

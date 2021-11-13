@@ -6,10 +6,10 @@ const MyOrder = () => {
     const {user}=useAuth();
     const [order, setOrder]= useState([])
     useEffect(() => {
-        fetch(`http://localhost:5000/myOrder/${user.email}`)
+        fetch(`https://sheltered-lake-09229.herokuapp.com/myOrder/${user.email}`)
           .then((res) => res.json())
           .then((data) => setOrder(data));
-      }, []); 
+      }, [user.email]); 
       delete order._id;
       console.log(order)
     return (
