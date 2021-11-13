@@ -19,6 +19,7 @@ import Details from './components/Home/Details/Details';
 import Dashboard from './components/Dashboard/Dashboard/Dashboard';
 import Explore from './components/Home/Explore/Explore';
 import Review from './components/Review/Review';
+import Footer from './components/Footer/Footer';
 
 
 
@@ -58,6 +59,7 @@ function App() {
                   <AddProduct></AddProduct>
                 </Route> */}
               </Switch>
+              <Footer></Footer>
           </Router>
        </AuthProvider>
     </div>

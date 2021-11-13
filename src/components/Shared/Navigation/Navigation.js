@@ -19,11 +19,12 @@ const Navigation = () => {
                         user?.email ? 
                         <div>
                               <Link className="navLink" to="/dashboard">Dashboard</Link>
-                            <Button className="btn btn-info" onClick={logout} variant="light">Logout</Button>
+                            <Button className="btn bg-primary p-2 btn-info " onClick={logout} variant="light">Logout</Button>
                         </div> :
                         <Link className="navLink" to="/login">Login</Link>
                     }
-                    {/* <a className="text-black" href="login">{user?.displayName}</a> */}
+                    <span className="text-black fs-4 ms-2" >{user?.displayName}</span>
+                    
                  
                 </Nav>
             </Navbar.Collapse>

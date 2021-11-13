@@ -13,7 +13,7 @@ const Banner = () => {
           }} >
             <div className="mt-5">
                
-               <Link className="navLink " to="/explore"><button className="btn btn-info p-3 fs-3">Expolore Here</button></Link>
+               <Link className="navLink " to="/explore"><button className="btn btn-info p-2 fs-5">Expolore Here</button></Link>
             </div>
         </div>
     );

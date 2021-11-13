@@ -1,5 +1,4 @@
 import React from 'react';
-import Footer from '../Footer/Footer';
 import LatestBlog from '../LatestBlog/LatestBlog';
 
 import Banner from './Banner/Banner';
@@ -14,7 +13,7 @@ const Home = () => {
             <Products></Products>
             <LatestBlog></LatestBlog>
             <UserComment></UserComment>
-            <Footer></Footer>
+            
         </div>
     );
 };
