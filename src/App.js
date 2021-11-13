@@ -10,7 +10,6 @@ import {
 } from "react-router-dom";
 import Register from './components/Register/Register';
 import Login from './components/Login/Login';
-import AddProduct from './components/AddProduct/AddProduct';
 import AuthProvider from './components/Context/AuthProvider/AuthProvider';
 import PrivateRoute from './components/PirvateRoute/PrivateRoute';
 
@@ -18,8 +17,10 @@ import Navigation from './components/Shared/Navigation/Navigation';
 import Details from './components/Home/Details/Details';
 import Dashboard from './components/Dashboard/Dashboard/Dashboard';
 import Explore from './components/Home/Explore/Explore';
-import Review from './components/Review/Review';
+
 import Footer from './components/Footer/Footer';
+import NotFound from './components/NotFound/NotFound';
+import Contact from './components/Contact/Contact';
 
 
 
@@ -39,15 +40,16 @@ function App() {
                 <Route exact path="/register">
                   <Register></Register>
                 </Route>
+                <Route exact path="/contact">
+                  <Contact></Contact>
+                </Route>
                 <Route exact path="/explore">
                   <Explore></Explore>
                 </Route>
                 <Route exact path="/login">
                   <Login></Login>
                 </Route>
-                {/* <Route exact path="/addreview">
-                 <Review></Review>
-                </Route> */}
+              
                 <Route exact path="/products/:productId">
                   <Details></Details>
                 </Route>
@@ -55,9 +57,9 @@ function App() {
                 <PrivateRoute  path="/dashboard">
                   <Dashboard></Dashboard>
                 </PrivateRoute>
-                {/* <Route exact path="/addproduct">
-                  <AddProduct></AddProduct>
-                </Route> */}
+                <Route exact path = "*">
+                  <NotFound></NotFound>
+                </Route>
               </Switch>
               <Footer></Footer>
           </Router>

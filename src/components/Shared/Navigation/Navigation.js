@@ -7,13 +7,14 @@ import './Navigation.css'
 const Navigation = () => {
     const {user,logout}= useAuth();
     return (
-        <Navbar className="navbar" collapseOnSelect expand="lg"   variant="dark">
+        <Navbar className="navbar bg-info" collapseOnSelect expand="lg"   variant="dark">
             <Container>
             <Link className="navLink " to="/home">Kid Toys</Link>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse className="text-black" id="responsive-navbar-nav">
                 <Nav className="ms-auto navbar">
                     <Link className="navLink" to="/home">Home</Link>
+                    <Link className="navLink" to="/contact">Contact</Link>
                   
                     {
                         user?.email ? 

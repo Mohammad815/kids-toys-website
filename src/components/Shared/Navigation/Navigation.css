@@ -1,5 +1,6 @@
 .navbar Link{
     text-decoration: none;
+
  
 }
 .navbar .navLink:hover{
@@ -15,7 +16,4 @@
     color: black;
     padding: 5px;
     
-}
-.navbar{
-    background-color: #B4D9E1
 }
