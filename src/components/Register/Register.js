@@ -7,7 +7,7 @@ import useFirebase from '../Hooks/useFirebase';
 const Register = () => {
     const { handleUserRegister } = useFirebase();
     const history = useHistory();
-  const { register, handleSubmit, watch, errors } = useForm();
+  const { register, handleSubmit  } = useForm();
 
   const onSubmit = (data) => {
     handleUserRegister(data.email, data.password,data.name,history);

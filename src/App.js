@@ -44,9 +44,9 @@ function App() {
                 <Route exact path="/login">
                   <Login></Login>
                 </Route>
-                <Route exact path="/addreview">
+                {/* <Route exact path="/addreview">
                  <Review></Review>
-                </Route>
+                </Route> */}
                 <Route exact path="/products/:productId">
                   <Details></Details>
                 </Route>
@@ -54,9 +54,9 @@ function App() {
                 <PrivateRoute  path="/dashboard">
                   <Dashboard></Dashboard>
                 </PrivateRoute>
-                <Route exact path="/addproduct">
+                {/* <Route exact path="/addproduct">
                   <AddProduct></AddProduct>
-                </Route>
+                </Route> */}
               </Switch>
           </Router>
        </AuthProvider>

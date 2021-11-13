@@ -58,6 +58,5 @@ const Review = () => {
 export default Review;
 
 
-{/* 
-            "homepage": "https://github.com/programming-hero-web-course-4/niche-website-client-side-Mohammad815#readme" */}
+
     

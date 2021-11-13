@@ -1,57 +1,67 @@
 import React from "react";
 import { Col, Row } from "react-bootstrap";
 import useAuth from '../../Context/useAuth';
+import './Dashboard.css'
 
 import {
-    BrowserRouter as Router,
+    
     Switch,
     Route,
     Link,
-    useParams,
     useRouteMatch
   } from "react-router-dom";
-import Home from "../../Home/Home";
 import Review from "../../Review/Review";
 import MakeAdmin from "../../Dashboard/MakeAdmin/MakeAdmin"
 import Pay from "../Pay/Pay";
 import AddProduct from "../../AddProduct/AddProduct";
 import ManagAllProduct from "../ManageAllProducts/ManagAllProduct";
+import ManageAllOrder from "../ManageAllOrder/ManageAllOrder";
+import MyOrder from "../MyOrder/MyOrder";
 
 const Dashboard = () => {
   const {admin}= useAuth()
   console.log(admin)
     let { path, url } = useRouteMatch();
     return (
-        <Row>
-    <Col xs={12} md={4}>
-    <ul>
+  <Row>
+    <Col xs={12} md={3} className="col1 mt-5">
+        <div>
+        <ul>
         <li>
-          <Link to={`${url}`}>Home</Link>
+          <Link className="link" to={`${url}`}>Dashboard</Link>
         </li>
         <li>
-          <Link to={`${url}/review`}>Review</Link>
+          <Link className="link" to={`${url}/review`}>Review</Link>
         </li>
         <li>
-          {admin && <Link to={`${url}/makeAdmin`}>Make Admin</Link>}
+          <Link className="link" to={`${url}/pay`}>Payment</Link>
         </li>
         <li>
-          <Link to={`${url}/pay`}>Payment</Link>
-          
+          <Link className="link" to={`${url}/myOrder`}>My Order</Link>
         </li>
         <li>
-          <Link to={`${url}/addProduct`}>Add Product</Link>
-
+          {admin && <div>
+           <li>
+           <Link className="link" to={`${url}/makeAdmin`}>Make Admin</Link>
+           </li>
+            <li>
+            <Link className="link" to={`${url}/addProduct`}>Add Product</Link>
+           </li>
+           <li>
+          <Link className="link" to={`${url}/manageProduct`}>Manage All Product</Link>
         </li>
         <li>
-          <Link to={`${url}/manageProduct`}>Manage All Product</Link>
-
+          <Link className="link" to={`${url}/manageOrder`}>Manage All Order</Link>
         </li>
+          </div>}
+        </li>  
       </ul>
+        </div>
     </Col>
-    <Col xs={6} md={8}>
+    <Col xs={12} md={9}>
     <Switch>
         <Route exact path={path}>
-          <Home></Home>
+            <Dashboard></Dashboard>
         </Route>
         <Route path={`${path}/review`}>
             <Review></Review>
@@ -67,6 +77,12 @@ const Dashboard = () => {
         </Route>
         <Route path={`${path}/manageProduct`}>
             <ManagAllProduct></ManagAllProduct>
+        </Route>
+        <Route path={`${path}/manageOrder`}>
+            <ManageAllOrder></ManageAllOrder>
+        </Route>
+        <Route path={`${path}/myOrder`}>
+            <MyOrder></MyOrder>
         </Route>
       </Switch>
     </Col>

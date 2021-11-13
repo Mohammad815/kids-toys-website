@@ -14,16 +14,13 @@ const Navigation = () => {
             <Navbar.Collapse className="text-black" id="responsive-navbar-nav">
                 <Nav className="ms-auto navbar">
                     <Link className="navLink" to="/home">Home</Link>
-                    <Link className="navLink" to="/addproduct">Add Product</Link>
                   
-                    <Link className="navLink" to="/dashboard">Dashboard</Link>
-                    {/* <Link className="navLink" to="/addreview">Add Review</Link> */}
-                    
-                   
-                    
                     {
                         user?.email ? 
-                        <Button className="btn btn-info" onClick={logout} variant="light">Logout</Button> :
+                        <div>
+                              <Link className="navLink" to="/dashboard">Dashboard</Link>
+                            <Button className="btn btn-info" onClick={logout} variant="light">Logout</Button>
+                        </div> :
                         <Link className="navLink" to="/login">Login</Link>
                     }
                     {/* <a className="text-black" href="login">{user?.displayName}</a> */}
