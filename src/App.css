@@ -28,12 +28,12 @@
   color: #61dafb;
 }
 
-.btn-common{
-  background-color: gainsboro;
+/* .btn-common{
+ 
   padding: 10px;
   font-size: 25px;
   border-radius: 5px;
-}
+} */
 
 @keyframes App-logo-spin {
   from {

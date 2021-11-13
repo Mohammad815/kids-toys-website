@@ -8,7 +8,7 @@ const LatestBlog = () => {
     return (
   
             <Container>
-            <h4>Latest Blog</h4>
+            <h2 className="text-info mt-5 mb-4">Latest Blog</h2>
          
             <div className="row container ">
                
@@ -18,7 +18,7 @@ const LatestBlog = () => {
                         <Card.Body>
                         <Card.Title>Learn while you grow toys Baby Planet</Card.Title>
                        
-                        <Button variant="primary">Go somewhere</Button>
+                        <Button className="btn btn-info p-2 fs-5 mt-2">Go somewhere</Button>
                         </Card.Body>
                     </Card>
                 </div>
@@ -28,7 +28,7 @@ const LatestBlog = () => {
                         <Card.Body>
                         <Card.Title>Mother revolves around her children</Card.Title>
                         
-                        <Button variant="primary">Go somewhere</Button>
+                        <Button className="btn mt-2 btn-info p-2 fs-5">Go somewhere</Button>
                         </Card.Body>
                     </Card>
                     </div>
@@ -37,7 +37,7 @@ const LatestBlog = () => {
                         <Card.Img variant="top" src={img3} />
                         <Card.Body>
                         <Card.Title>Baby Planet's toys makes so easy</Card.Title>
-                        <Button variant="primary">Go somewhere</Button>
+                        <Button className="btn btn-info p-2 fs-5 mt-2">Go somewhere</Button>
                         </Card.Body>
                     </Card>
                     </div>

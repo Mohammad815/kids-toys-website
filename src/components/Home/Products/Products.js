@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Container } from 'react-bootstrap';
+import { Card, Container } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import './Products.css'
 
@@ -11,29 +11,30 @@ const Products = () => {
         .then((data) => setproducts(data));
     }, []);
     
-    // const toyProduct = products.slice(0, 4)
+    const toyProduct = products.slice(0, 6)
    
-    // console.log(toyProduct);
+   
     return (
         <div>
-      <h1>Products</h1>
+      <h2 className="text-info mt-5 mb-4">Trending Product</h2>
       <Container>
       <div className="services ">
         <div className="row container ">
-          {products?.map((pd, index) => (
+          {toyProduct?.map((pd, index) => (
             <div className="col-md-6 col-lg-4 toy-img mb-3">
-              <div className="service p-3 border border m-2">
-                <div >
-                  <img className="w-50" src={pd?.image} alt="" />
-                </div>
-                <h1>{pd.name}</h1>
-                <p>{pd.description}</p>
-                <p>{pd.price}</p>
-                <Link to={`/products/${pd._id}`}>
-                  {" "}
-                  <button className="btn btn-success">Order Now</button>
-                </Link>
-              </div>
+              
+              <Card>
+                   <Card.Img variant="top" src={pd?.image} />
+                        <Card.Body>
+                        <h1>{pd.name}</h1>
+                            <p>{pd.description}</p>
+                            <p>{pd.price}</p>
+                            <Link to={`/products/${pd._id}`}>
+                              {" "}
+                              <button className="btn btn-info p-2 fs-5">Order Now</button>
+                            </Link>
+                        </Card.Body>
+                    </Card>
             </div>
           ))}
         </div>
