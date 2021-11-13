@@ -18,7 +18,7 @@ const UserComment = () => {
           {review?.map((pd, index) => (
             <div className="col-md-6 col-lg-4">
               <div className="service p-3 border border m-2">
-                <h1>Name : {pd.name}</h1>
+                <h3>Name : {pd.name}</h3>
                 <p>Email : {pd.email}</p>
                 <p>Comment : {pd.comments}</p>
               </div>

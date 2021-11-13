@@ -18,6 +18,7 @@ import ManagAllProduct from "../ManageAllProducts/ManagAllProduct";
 import ManageAllOrder from "../ManageAllOrder/ManageAllOrder";
 import MyOrder from "../MyOrder/MyOrder";
 
+
 const Dashboard = () => {
   const {admin}= useAuth()
  
@@ -54,12 +55,14 @@ const Dashboard = () => {
           <Link className="link" to={`${url}/manageOrder`}>Manage All Order</Link>
         </li>
           </div>}
-        </li>  
+        </li> 
+        
       </ul>
         </div>
     </Col>
     <Col xs={12} md={9}>
     <Switch>
+       
         <Route path={`${path}/review`}>
             <Review></Review>
         </Route>

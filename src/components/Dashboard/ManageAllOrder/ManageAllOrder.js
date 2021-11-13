@@ -5,6 +5,7 @@ import './ManageAllOrder.css'
 const ManageAllOrder = () => {
     const [allOrder, setallOrder] = useState([]);
     const [isDeleted, setDeleted] = useState(null)
+
     useEffect(() => {
       fetch("https://sheltered-lake-09229.herokuapp.com/allOrders")
         .then((res) => res.json())
@@ -33,10 +34,9 @@ const ManageAllOrder = () => {
     console.log(allOrder)
     return (
         <div>
-            <Table bordered hover responsive="sm">
+            <Table bordered hover responsive="sm" className="mt-5">
                 <thead>
                 <tr>
-                    <th>#</th>
                     <th>Name</th>
                     <th>Email</th>
                     <th>status</th>
@@ -47,7 +47,6 @@ const ManageAllOrder = () => {
                 {
                     allOrder.map(order=> <tbody>
                         <tr>
-                            <td>1</td>
                             <td>{order.name}</td>
                             <td>{order.email}</td>
                             <td>{order.status}</td>

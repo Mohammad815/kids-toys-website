@@ -47,7 +47,7 @@ const Review = () => {
         <input
        className="submit-btn btn btn-primary fs-3 m-3"
           type="submit"
-          value="Register"
+          value="Add Review"
         />
       </form>
     </div>
