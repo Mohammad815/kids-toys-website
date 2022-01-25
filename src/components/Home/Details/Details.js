@@ -34,13 +34,13 @@ const Details = () => {
         <div>
         <div className="details-container">
           <div className="row container">
-            <div className="col-md-6">
-              <img className="w-50" src={product.image} alt="" />
-              <p>{product?.description}</p>
-              <h1>{product?.name}</h1>
-              <h1> {product?.price}</h1>
+            <div className="col-md-6 p-3">
+              <img className="w-100 h-50 mb-2" src={product.image} alt="" />
+              <p> Details: {product?.description}</p>
+              <h3>Name: {product?.name}</h3>
+              <h3>Price:  {product?.price}</h3>
             </div>
-            <div className="col-md-6">
+            <div className="col-md-6 p-4">
               <form onSubmit={handleSubmit(onSubmit)}>
                 <input
                   {...register("email")}

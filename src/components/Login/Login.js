@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
-import { Container, Form, Button } from 'react-bootstrap';
+import { Container, Form, Button, Col, Row } from 'react-bootstrap';
 import { useHistory, useLocation } from 'react-router';
 import {  NavLink } from 'react-router-dom';
 import useAuth from '../Context/useAuth';
 import './Login.css'
+import img from '../../image/contact.png'
 
 const Login = () => {
     const {signInWithGoogle,loginUser}= useAuth()
@@ -44,32 +45,43 @@ const Login = () => {
     }
     return (
         <div>
-          <h3 className="m-4">Welcome back! Please enter your Email and password to login.</h3>
-          <Container className="form">
-          <Form onSubmit={handleLoginWithEmailAndPassword} className="w-50">
-              <Form.Group className="mb-3" controlId="formBasicEmail">
-                <Form.Label>Email address</Form.Label>
-                <Form.Control onBlur={handleGetEmail} type="email" placeholder="Enter email" />
-              
-              </Form.Group>
+          <h3 className="m-4">Welcome back! Please enter your Email and Password to login.</h3>
+          <Container>
+            <Row>
+              <Col md={6} className='left'>
+                  <div><img  src={img} alt=""/></div>
+              </Col>
+              <Col md={6} className='left p-2'>
+                  <div>
+                      <Form onSubmit={handleLoginWithEmailAndPassword} >
+                      <Form.Group className="mb-2 w-100" controlId="formBasicEmail">
+                        <Form.Label>Email address</Form.Label>
+                        <Form.Control onBlur={handleGetEmail} type="email" placeholder="Enter email" />
+                      
+                      </Form.Group>
 
-              <Form.Group className="mb-3" controlId="formBasicPassword">
-                <Form.Label>Password</Form.Label>
-                <Form.Control onBlur={handleGetPassword} type="password" placeholder="Password" />
-              </Form.Group>
-            
-              <Button className="w-25 fs-4  mb-3" variant="primary" type="submit">
-                Login
-              </Button> <br />
-              <NavLink
-                            style={{ textDecoration: 'none' }}
-                            to="/register">
-                            <h4 variant="primary">New User? Please Register</h4>
-                        </NavLink>
-           </Form>
+                      <Form.Group className="mb-2 w-100" controlId="formBasicPassword">
+                        <Form.Label>Password</Form.Label>
+                        <Form.Control onBlur={handleGetPassword} type="password" placeholder="Password" />
+                      </Form.Group>
+                    
+                      <Button className="w-50 fs-5 mb-2"  type="submit">
+                        Login
+                      </Button> <br />
+                      <NavLink
+                                    style={{ textDecoration: 'none' }}
+                                    to="/register">
+                                    <h4 >New User? Please Register</h4>
+                                </NavLink>
+                  </Form>
+                 
+              <h2>OR</h2>
+              <button className="btn btn-primary  fs-5" onClick={handleGoogleLogin}>Google Sign In</button>
+              </div>
+              </Col>
+            </Row>
           </Container>
-         <h2>OR</h2>
-          <button className="btn btn-primary  fs-4" onClick={handleGoogleLogin}>Google Sign In</button>
+         
          
         </div>
 

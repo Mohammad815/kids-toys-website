@@ -1,5 +1,9 @@
-.form{
+.left{
     display: flex;
     justify-content: center;
-   
+    vertical-align: center;
+}
+.left img{
+    height: 400px;
+    width: 500px;
 }

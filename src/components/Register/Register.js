@@ -41,7 +41,7 @@ const Register = () => {
         <br />
 
         <input
-          className="submit-btn btn btn-primary fs-3 m-3"
+          className="submit-btn btn btn-primary w-50 fs-5 m-3"
           type="submit"
           value="Register"
         />
